@@ -1,0 +1,46 @@
+
+//transition
+@mixin transition($time) {
+	-webkit-transition: all $time ease-out 0s;
+	-moz-transition: all $time ease-out 0s;
+	-ms-transition: all $time ease-out 0s;
+	-o-transition: all $time ease-out 0s;
+	transition: all $time ease-out 0s;
+}
+
+@mixin overlay($color, $opacity) {
+	z-index: 1;
+	position: relative;
+
+	&:before {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		content: "";
+		position: absolute;
+		background: rgba($color, $opacity);
+		@include transition(0.3s);
+	}
+}
+
+@mixin absolute($z-index) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	z-index: $z-index;
+}
+
+@mixin before($zindex) {
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	z-index: $zindex;
+}

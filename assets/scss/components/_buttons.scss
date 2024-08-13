@@ -1,0 +1,47 @@
+@use '../utils' as *;
+
+/* ---------------------------------------
+  06. buttons css
+ ----------------------------------------- */
+
+/* ------------------------------------------------------------------
+   Template Default Button, Input Styles - Value Change with Your's Need
+-------------------------------------------------------------------- */
+
+ .btnd {
+	line-height: 100%;
+	font-weight: var(--tj-fw-sbold);
+	font-family: var(--tj-ff-heading);
+	display: inline-block;
+	@include transition(.4s);
+	text-transform: uppercase;
+	font-size: 18px;   
+  }
+  
+  .btn {
+	border: 0;
+	background: transparent;
+	border-radius: 0;
+	line-height: 1;
+	padding: 0;
+	margin: 0;
+	font-size: inherit;
+  }
+  .btn:focus{
+   box-shadow: none;
+  }
+  .tj-btn-primary {
+		@extend .btnd;    
+		padding: 17px 30px;
+		background: var(--tj-heading-secondary);
+		text-transform: capitalize;
+		color:var(--tj-common-white);
+	i{
+	  margin-left: 5px;
+	}
+	&:hover {
+		background: var(--tj-heading-primary);
+	}
+  
+  }
+	

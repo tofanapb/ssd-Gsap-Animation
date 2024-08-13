@@ -1,0 +1,41 @@
+
+// font family
+$font-family: (
+    ff: (
+        body: "'Avenir LT Std'",
+        heading: "'Optima'",
+        fw: '"Font Awesome 6 Pro"',
+    )
+);
+
+// font weight
+$font-scale: (
+    fw: (
+        normal: normal,
+        elight: 200,
+        light: 300,
+        regular: 400,
+        medium: 500,
+        sbold: 600,
+        bold: 700,
+        ebold: 800,
+        blacks: 900,
+    )
+);
+
+
+// font size
+$font-size: (
+    fz: (
+        body: 16px,
+        p: 18px,
+        h1: 75px,
+        h2: 45px,
+        h3: 30px,
+        h4: 24px,
+        h5: 22px,
+        h6: 18px,
+    )
+);
+
+

@@ -1,0 +1,143 @@
+@use '../utils' as *;
+
+/* ----------------------------------
+	29. testimonial css
+ ------------------------------------ */
+
+.client__say{
+	margin-bottom: 90px;
+	@media #{$md} {
+		margin-bottom: 70px;
+	}
+	@media #{$sm,$xs} {
+		margin-bottom: 60px;
+	}
+}
+
+ .client__say__widget{
+	.client__comment{
+		max-width: 650px;
+		width: 100%;
+		font-size: 80px;
+		font-style: italic;
+		font-weight: var(--tj-fw-normal);
+		text-transform: uppercase;
+		@media #{$md} {
+			font-size: 60px;
+			max-width: 500px;
+		}
+		@media #{$sm} {
+			font-size: 50px;
+			max-width: 500px;
+		}
+		@media #{$xs} {
+			font-size: 40px;
+			max-width: 500px;
+		}
+	}
+	&.client__say__widget__style2{
+		.client__comment{
+			max-width: 750px;
+			font-style: normal;
+		}
+		.author__name{
+			max-width: 750px;
+			font-style: italic;
+			span{
+				font-style: normal;
+				margin-bottom: 30px;
+				@media #{$sm,$xs} {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	.author__name{
+		text-align: end;
+		text-transform: uppercase;
+		max-width: 650px;
+		width: 100%;
+		margin-right: 0;
+		margin-left: auto;
+		font-size: 80px;
+		font-style: normal;
+		font-weight: var(--tj-fw-normal);
+		span{
+			text-align: start;
+			font-weight: var(--tj-fw-bold);
+			display: block;
+		}
+		@media #{$md} {
+			font-size: 60px;
+			max-width: 500px;
+		}
+		@media #{$sm,$xs} {
+			font-size: 50px;
+			max-width: 500px;
+		}
+	}
+ }
+
+//  packages__heading
+
+ .packages__heading{
+	&.packages__heading2{
+		background: var(--tj-theme-3);
+		max-width: 100%;
+		.packages__title{
+			color: var(--tj-text-1);
+		}
+	}
+	&.packages__heading3{
+		margin-left: 0;
+		max-width: 370px;
+		background: var(--tj-theme-3);
+		.packages__title{
+			color: var(--tj-text-1);
+			display: inline-block;
+		}
+	}
+	margin: auto;
+	max-width: 825px;
+	margin-bottom: 20px;
+	border: 1px solid var(--tj-common-white);
+	.packages__title{
+		text-align: center;
+		padding: 25px 50px;
+		text-transform: uppercase;
+		font-size: 38px;
+		font-weight: var(--tj-fw-regular);
+		letter-spacing: 2px;
+		color: var(--tj-theme-2);
+		margin-bottom: 0;
+		@media #{$sm,$xs} {
+			font-size: 24px;
+			padding: 15px 30px;
+		}
+	}
+ }
+ .packages__content2{
+	max-width: 370px;
+	background: var(--tj-theme-3);
+	p{
+		font-size: 18px;
+		line-height: 1.5;
+		padding: 30px;
+		color: var(--tj-text-1);
+		display: inline-block;
+	}
+}
+ .packages__content{
+	margin-bottom: 20px;
+	max-width: 825px;
+	margin-left:auto ;
+	margin-right: auto;
+	border: 1px solid var(--tj-common-white);
+	p{
+		padding: 25px;
+		font-size: 20px;
+		line-height: 1.5;
+		color: var(--tj-text-body);
+		font-family: var(--tj-ff-body);
+	}
+}

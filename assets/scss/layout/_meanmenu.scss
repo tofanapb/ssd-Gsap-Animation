@@ -1,0 +1,142 @@
+@use '../utils' as *;
+
+/* ------------------------------------------------------------------
+	11. meanmenu css
+-------------------------------------------------------------------- */
+.nav__menu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.main-menu {
+	position: absolute;
+	z-index: 9999;
+	display: block;
+	top: 0;
+	height: 100%;
+	visibility: hidden;
+    opacity: 0;
+	transition: 0.6s ease-in;
+	&.show{
+		visibility: visible;
+		opacity: 1;
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		> li {
+			> a {
+				line-height: 1;
+				text-align: center;
+				text-transform: capitalize;
+				display: inline-block;
+				font-family: var(--tj-ff-heading);
+				font-style: normal;
+				font-weight: var(--tj-fw-regular);
+				font-size: 80px;
+				cursor: pointer;
+				line-height: 1.0;
+				color: var(--tj-heading-primary);
+				padding: 20px;
+				position: relative;
+				@media #{$md} {
+					font-size: 50px;
+				}
+				@media #{$sm,$xs} {
+					font-size: 40px;
+				}
+				&::after{
+					content: '';
+					position: absolute;
+					top: 0%;
+					left: 0%;
+					height: 0%;
+					z-index: 999;
+					width: 0%;
+					border-radius: 100%;
+					border: 0px solid var(--tj-heading-primary);
+					transform: rotate(6deg);
+				}
+			}
+			>ul{
+				margin-bottom: 20px;
+				>li{
+					display: block;
+					a{
+						font-size: 60px;
+						padding: 00px 00px 15px 0px;
+						@media #{$md} {
+							font-size: 40px;
+						}
+						@media #{$sm,$xs} {
+							font-size: 30px;
+						}
+						
+					}
+					&:last-child{
+						a{
+							padding-bottom: 0;
+						}
+					}
+					>ul{
+						>li{
+							display: block;
+							a{
+								font-size: 50px;
+								padding: 00px 00px 15px 0px;
+								@media #{$md} {
+									font-size: 35px;
+								}
+								@media #{$sm,$xs} {
+									font-size: 25px;
+								}
+								
+							}
+							&:last-child{
+								a{
+									padding-bottom: 0;
+								}
+							}
+						}
+						
+					}
+				}
+			}
+			&:hover {
+				> a {
+					font-weight: var(--tj-fw-black);
+					&::after{
+						height: 100%;
+						width: 100%;
+						border: 1px solid var(--tj-heading-primary);
+					}
+				}
+			}
+		}
+	}
+}
+
+.metismenu {
+	.dropdown-toggle{
+		&.active{
+			&::after {
+				transform: rotate(-135deg) translate(0, -50%);
+			}
+		}
+	}
+	.dropdown-menu {
+        position: relative;
+        min-width: auto;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        list-style: none;
+        background-color: transparent;
+        background-clip: padding-box;
+        border: 0px solid rgba(0,0,0,.15);
+        border-radius: 0;
+		margin-bottom: 20px;
+	}
+}

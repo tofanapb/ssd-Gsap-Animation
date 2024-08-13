@@ -1,0 +1,37 @@
+@use '../utils' as *;
+
+/* ----------------------------------
+	22. brand css
+ ------------------------------------ */
+
+ 
+ //compny__wrapper
+
+ .compny__wrapper{
+	padding: 100px 0px 80px 0px;
+	@media #{$md} {
+		padding: 80px 0px 80px 0px;
+	}
+	@media #{$sm,$xs} {
+		padding: 60px 0px 60px 0px;
+	}
+	.section__heading{
+		margin-bottom: 150px;
+		@media #{$md} {
+			margin-bottom: 80px;
+		}
+		@media #{$sm} {
+			margin-bottom: 50px;
+		}
+		@media #{$xs} {
+			margin-bottom: 50px;
+		}
+	}
+	.slider__com{
+		.slider__item{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+ }

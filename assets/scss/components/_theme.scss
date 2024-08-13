@@ -1,0 +1,209 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------
+  01. THEME DEFAULT CSS START
+----------------------------------------*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*---------------------------------
+    typography css start 
+---------------------------------*/
+body {
+	font-family: var(--tj-ff-body);
+	font-size: var(--tj-fz-body);
+	font-weight: var(--tj-fw-normal);
+	color: var(--tj-common-body);
+	line-height: 1.5;
+    background: var(--tj-text-body);
+    overflow-x: hidden;
+}
+
+a{
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--tj-ff-heading);
+	color: var(--tj-heading-primary);
+	font-weight: var(--tj-fw-sbold);
+	line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+h1 a ,h2 a, h3 a, h4 a, h5 a, h6 a  {
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a  {
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+}
+
+h1 {
+    font-size:  var(--tj-fz-h1);
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: var(--tj-fz-h2);
+}
+
+h3 {
+    font-size: var(--tj-fz-h3);
+}
+
+h4 {
+    font-size:  var(--tj-fz-h4);
+}
+
+h5 {
+    font-size:  var(--tj-fz-h5);
+}
+
+h6 {
+    font-size: var(--tj-fz-h6);
+}
+
+p {
+    line-height: 1.5;
+	font-family: var(--tj-ff-body);
+	font-size: var(--tj-fz-body);
+	font-weight: var(--tj-fw-regular);
+	color: var(--tj-text-body);
+    margin-bottom: 10px;
+}
+
+a,
+.btn,
+button,
+span,
+p,
+i,
+input,
+select,
+textarea,
+li,
+img,
+svg path,
+*::after,
+*::before,
+.transition-3,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include transition(.3s);
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    border: 0px;
+}
+a,button {
+  &:hover, &:focus, &:active {
+  text-decoration: none;
+  outline: none  ;
+  border: 0;
+  }
+}
+ul{
+    margin-bottom: 0;
+    padding: 0;
+    list-style-type: none;
+    >li{
+        list-style: none;
+        display: inline-block;
+    }
+}
+hr{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+    display: none;
+}
+
+.form-control{
+    border-radius: 0px;
+}
+
+form {
+    position: relative;
+}
+button{
+    background: transparent;
+    border: none;
+}
+.form-control:focus {
+    outline: 1px solid var(--tj-text-1);
+    border: 1px solid var(--tj-text-1);
+    box-shadow:  0 0 0 ;
+}
+
+.header__overly {
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: crosshair;
+    z-index: 11;
+    width: 0%;
+    height: 100%;
+    background: var(--tj-common-white);
+    transition: 0.45s ease-in-out;
+    &.active{
+        width: 100%;
+        left: 0%;
+        opacity: 0.9;
+        right: auto;
+    }
+}
+
+
+
+
+/* ----------------------------------
+	04. spacing css
+ ------------------------------------ */
+
+.container-fluid{
+    max-width: 1700px;
+    margin: 0 auto;
+}
+.mx-auto {
+	margin: 0 auto;
+}
+
+
+
+

@@ -1,0 +1,79 @@
+@use 'colors' as *;
+@use 'typography' as *;
+
+/*-----------------------------------------------------------------------------------
+
+    Theme Name: 
+    Author: Dev_raj 
+    Description: 
+    Version: 1.0.0
+
+-----------------------------------------------------------------------------------*/
+
+
+/************ TABLE OF CONTENTS ***************
+
+    01. THEME DEFAULT CSS
+    02. animation css
+    03. buttons css
+    04. background CSS
+    05. carousel css
+    06. section-title css
+    07. header css
+    08. meanmenu css
+    09. Hero css
+    10. about css
+    11. services css
+    12. testimonial css
+    13. blog css
+    14. brand css
+    15. fact css
+    16. CTA css
+    17. portfolio css
+    18. contact css
+    19. footer css
+
+**********************************************/
+
+
+
+:root {
+    
+    /* ----------------------------------
+     @font family declaration
+    ------------------------------------ */
+    @each $ff, $shades in $font-family {
+        @each $shade, $value in $shades {
+            --tj-#{$ff}-#{$shade}: #{$value};
+        }
+    }
+
+    /* ----------------------------------
+     @color declaration
+    ------------------------------------ */
+    @each $color, $shades in $colors {
+        @each $shade, $value in $shades {
+            --tj-#{$color}-#{$shade}: #{$value};
+        }
+    }
+
+    /* ----------------------------------
+     @font weight declaration
+    ------------------------------------ */
+
+    @each $fw, $shades in $font-scale {
+        @each $shade, $value in $shades {
+            --tj-#{$fw}-#{$shade}: #{$value};
+        }
+    }
+
+     /* ----------------------------------
+      @font size declaration
+    ------------------------------------ */
+
+    @each $fz, $shades in $font-size {
+        @each $shade, $value in $shades {
+            --tj-#{$fz}-#{$shade}: #{$value};
+        }
+    }
+}

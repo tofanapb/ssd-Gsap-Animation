@@ -1,0 +1,45 @@
+$colors: (
+
+// Theme Color - Defualt Colors
+    common: (
+        white: #ffffff,
+        black: #000000,
+        body:#F8F2EF,
+    ),
+
+    heading: (
+        primary: #171717,
+        secondary: #3A312C,
+    ),
+
+    grey: (
+        1: #c5c5c5,
+        2:rgba(255, 255, 255,0.7),
+    ),
+
+    text: (
+        body:#F8F2EF,
+        1:#171717,
+        2:#000,
+    ),
+
+    theme: (
+        primary: #F8F2EF,
+        secondary: #3A312C,
+        2: #DDD4CC,
+        3:#E3DDD6,
+        4:#564A42,
+    ),
+
+    border: (
+        1: #ededed,
+    ),
+
+    shadow:(
+        1: rgba(0, 0, 0, 0.1),
+    ),
+
+    placeholder:(
+        1: #B1B1B1,
+    ),
+);

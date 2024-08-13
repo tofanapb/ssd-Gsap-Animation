@@ -1,0 +1,61 @@
+@use "../utils" as *;
+/* ----------------------------------
+	13. about css
+------------------------------------ */
+
+.about__area{
+	padding-bottom: 250px;
+	position: relative;
+	@media #{$lg} {
+		padding-bottom: 200px;
+	}
+	@media #{$md} {
+		padding-bottom: 150px;
+	}
+	@media #{$sm} {
+		padding-bottom: 150px;
+	}
+	@media #{$xs} {
+		padding-bottom: 150px;
+	}
+	.about__text{
+		font-family: var(--tj-ff-body);
+		text-align: center;
+		font-size: 28px;
+		font-weight: var(--tj-fw-black);
+		line-height: 1.6;
+		color: var(--tj-text-1);
+	}
+	.about__text__content{
+		margin-bottom: 180px;
+		@media #{$lg} {
+			margin-bottom: 150px;
+		}
+		@media #{$md} {
+			margin-bottom: 100px;
+		}
+		@media #{$sm} {
+			margin-bottom: 80px;
+		}
+		@media #{$xs} {
+			margin-bottom: 60px;
+		}
+	}
+	.quite{
+		position: absolute;
+		bottom: 10%;
+		@media #{$md} {
+			font-size: 160px;
+		}
+		@media #{$sm,$xs} {
+			img{
+				max-height: 200px;
+			}
+		}
+		right: 20%;
+	}
+}
+
+.about__img{
+	margin-bottom: 20px;
+}
